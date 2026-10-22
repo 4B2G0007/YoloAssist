@@ -1,0 +1,12 @@
+{
+  "model": "yolo11n.pt",
+  "device": "cpu",
+  "imgsz": 640,
+  "camera_size": [640, 480],
+  "camera_format": "XBGR8888",
+  "camera_index": 0,
+  "camera_fps": 30.0,
+  "camera_autofocus": "continuous",
+  "camera_warmup_s": 1.0,
+  "camera_timeout": 5.0
+}

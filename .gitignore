@@ -1,0 +1,23 @@
+# Never share platform-specific environments or secrets.
+yolo-env/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Locally generated diagnostics and results.
+results/
+runs/
+verification/
+
+# Large/private test footage is shared separately when using GitHub.
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# Keep yolo11n.pt and the audio/*.wav files in the repository.
