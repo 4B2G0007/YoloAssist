@@ -1,0 +1,372 @@
+{
+  "camera_error.wav": {
+    "text": "影像中斷，請檢查攝影機。",
+    "seconds": 1.8687708333333333,
+    "sha256": "3d8bca9d56f0c96d64f1171bfb91d194b443f870b2863a9f885540663341abd2",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 0.0,
+    "source_end_s": 1.8687708333333333,
+    "order": 1
+  },
+  "normal_left_person.wav": {
+    "text": "左前方有行人。",
+    "seconds": 1.1229166666666666,
+    "sha256": "0794c99f8bd9b466fe42b54a8583ad5deed6eb84b78e95617386fcf1c0126345",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 2.536,
+    "source_end_s": 3.658916666666667,
+    "order": 2
+  },
+  "urgent_left_person.wav": {
+    "text": "注意，左前方行人靠近。",
+    "seconds": 1.7380416666666667,
+    "sha256": "e09ad7968999961cf9c04bad084f23be48a594db4668c76ca0d22570cb22972f",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 4.2839583333333335,
+    "source_end_s": 6.022,
+    "order": 3
+  },
+  "normal_center_person.wav": {
+    "text": "前方有行人。",
+    "seconds": 1.0003541666666667,
+    "sha256": "6896ef96bdc1f8158649103c4d0187de49b346425733108ff0e6abc9b4084726",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 6.661333333333333,
+    "source_end_s": 7.6616875,
+    "order": 4
+  },
+  "urgent_center_person.wav": {
+    "text": "注意，前方行人靠近。",
+    "seconds": 1.6200208333333332,
+    "sha256": "ca41417494366919020e00ae334a4486a533489c4aca0fee18e5ec7a33cfadb2",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 8.290416666666667,
+    "source_end_s": 9.9104375,
+    "order": 5
+  },
+  "normal_right_person.wav": {
+    "text": "右前方有行人。",
+    "seconds": 1.0962083333333332,
+    "sha256": "00d33ac44ef779021eb63fdd9bf41e174100ed5ec470e85bee10c722c46a5afc",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 10.5375,
+    "source_end_s": 11.633708333333333,
+    "order": 6
+  },
+  "urgent_right_person.wav": {
+    "text": "注意，右前方行人靠近。",
+    "seconds": 1.7082083333333333,
+    "sha256": "b4f87886c80e0ddb6cc0a92ef601b0440893bf9381cb184436057eb72753275c",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 12.257895833333333,
+    "source_end_s": 13.966104166666666,
+    "order": 7
+  },
+  "normal_left_bicycle.wav": {
+    "text": "左前方有自行車。",
+    "seconds": 1.2226041666666667,
+    "sha256": "7bb8335816b3e635d74f41a2ec09852864288d8521a9553b1b1c3c4ed9f9cf2f",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 14.594291666666667,
+    "source_end_s": 15.816895833333334,
+    "order": 8
+  },
+  "urgent_left_bicycle.wav": {
+    "text": "注意，左前方自行車靠近。",
+    "seconds": 1.8542916666666667,
+    "sha256": "3f05bde58c3f294f5c92b838e0552e47c873a567edb6efaed7843e944dbfb05d",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 16.495208333333334,
+    "source_end_s": 18.3495,
+    "order": 9
+  },
+  "normal_center_bicycle.wav": {
+    "text": "前方有自行車。",
+    "seconds": 1.131,
+    "sha256": "6c5d38b8b0fc92a8252a6c0a63bc56806433e11f7b75c7194c0684c36654d0bf",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 18.985,
+    "source_end_s": 20.116,
+    "order": 10
+  },
+  "urgent_center_bicycle.wav": {
+    "text": "注意，前方自行車靠近。",
+    "seconds": 1.7341041666666666,
+    "sha256": "1e650f8fe757b0bbbb0ec5cd019ba827eee24d4ac30b4118433375dca28430eb",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 20.793791666666667,
+    "source_end_s": 22.527895833333332,
+    "order": 11
+  },
+  "normal_right_bicycle.wav": {
+    "text": "右前方有自行車。",
+    "seconds": 1.1996041666666666,
+    "sha256": "43d2a92b2269431c35188a7bcaf9312bfad815047e2bac774329fbfe79a1c735",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 23.166395833333333,
+    "source_end_s": 24.366,
+    "order": 12
+  },
+  "urgent_right_bicycle.wav": {
+    "text": "注意，右前方自行車靠近。",
+    "seconds": 1.7985,
+    "sha256": "33edb7d31354fa0f46cfdee24a2096f497010748d1b3001fecb3ce8f7a5c9db1",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 25.041604166666666,
+    "source_end_s": 26.840104166666666,
+    "order": 13
+  },
+  "normal_left_car.wav": {
+    "text": "左前方有汽車。",
+    "seconds": 1.1036041666666667,
+    "sha256": "f27d6f4031c83fe4de9109af8a8c6d32d87297036855cb90f28f1cba977f375f",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 27.472104166666668,
+    "source_end_s": 28.575708333333335,
+    "order": 14
+  },
+  "urgent_left_car.wav": {
+    "text": "注意，左前方汽車靠近。",
+    "seconds": 1.7523958333333334,
+    "sha256": "1e686f06f2a2aebb4ef7070f1a45c2a5d037ae24ded65243c5bf6fca6b02f245",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 29.239895833333332,
+    "source_end_s": 30.992291666666667,
+    "order": 15
+  },
+  "normal_center_car.wav": {
+    "text": "前方有汽車。",
+    "seconds": 0.9727916666666667,
+    "sha256": "1e2803aed84c6c16a96907bd452a48264e9d2ae1c4e246dadf0f4dbcbc3de58e",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 31.6065,
+    "source_end_s": 32.57929166666667,
+    "order": 16
+  },
+  "urgent_center_car.wav": {
+    "text": "注意，前方汽車靠近。",
+    "seconds": 1.63,
+    "sha256": "52c53179164139b2983aac986434a2cce920c71f844372d21750d95aece59525",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 33.24820833333333,
+    "source_end_s": 34.87820833333333,
+    "order": 17
+  },
+  "normal_right_car.wav": {
+    "text": "右前方有汽車。",
+    "seconds": 1.0622083333333334,
+    "sha256": "b5d61435c7e9812fcfa29b9a337c13551c22309177fc41b17f306d553763e2c6",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 35.496,
+    "source_end_s": 36.55820833333333,
+    "order": 18
+  },
+  "urgent_right_car.wav": {
+    "text": "注意，右前方汽車靠近。",
+    "seconds": 1.6921041666666667,
+    "sha256": "5f776dc8c9f1a0818a399f35e3520d4b2ecfa78ffcc334b5ff13bf2304276aa0",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 37.21939583333333,
+    "source_end_s": 38.9115,
+    "order": 19
+  },
+  "normal_left_motorcycle.wav": {
+    "text": "左前方有機車。",
+    "seconds": 1.0786041666666666,
+    "sha256": "259d0019d871ae4aa3b3c3d6778f8fdb415de1bd60224d079e7af37dcf3e6b6c",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 39.535895833333335,
+    "source_end_s": 40.6145,
+    "order": 20
+  },
+  "urgent_left_motorcycle.wav": {
+    "text": "注意，左前方機車靠近。",
+    "seconds": 1.7308958333333333,
+    "sha256": "90eddf4dcdb77d26a869d54f49e2ede0e25d197cc7f2428a8e23eab162f6a150",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 41.285604166666666,
+    "source_end_s": 43.0165,
+    "order": 21
+  },
+  "normal_center_motorcycle.wav": {
+    "text": "前方有機車。",
+    "seconds": 0.9867916666666666,
+    "sha256": "74bb75efdef77c909bb47ca6eaa5b24060aa0aff60970bce2cf679d4514c4beb",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 43.627604166666664,
+    "source_end_s": 44.61439583333333,
+    "order": 22
+  },
+  "urgent_center_motorcycle.wav": {
+    "text": "注意，前方機車靠近。",
+    "seconds": 1.6343958333333333,
+    "sha256": "f8a2315e640eb07d5f6d75e9d8f16b0943986fc01161cd59f7564e2c854affac",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 45.28,
+    "source_end_s": 46.91439583333333,
+    "order": 23
+  },
+  "normal_right_motorcycle.wav": {
+    "text": "右前方有機車。",
+    "seconds": 1.0831041666666668,
+    "sha256": "166dbda785df2a0a76bb02e4943456b888e6923cc60edc6b66eaecea294555e4",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 47.53689583333333,
+    "source_end_s": 48.62,
+    "order": 24
+  },
+  "urgent_right_motorcycle.wav": {
+    "text": "注意，右前方機車靠近。",
+    "seconds": 1.6873125,
+    "sha256": "06ad2c5c664f6ac72d21cc366b4bd3949545d4441fb135117244d340f00b9a8b",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 49.29029166666667,
+    "source_end_s": 50.977604166666666,
+    "order": 25
+  },
+  "normal_left_bus.wav": {
+    "text": "左前方有公車。",
+    "seconds": 1.0968958333333334,
+    "sha256": "c7f9f886bc581356d50b0bb72bdb829be6202ae16a0472cfa266e004e53799ec",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 51.6,
+    "source_end_s": 52.696895833333336,
+    "order": 26
+  },
+  "urgent_left_bus.wav": {
+    "text": "注意，左前方公車靠近。",
+    "seconds": 1.7271875,
+    "sha256": "62973a2762a710f8f11f27cf3ac54c8ac6ebb28b50148b1eaa88340c5d5ea417",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 53.36320833333333,
+    "source_end_s": 55.09039583333333,
+    "order": 27
+  },
+  "normal_center_bus.wav": {
+    "text": "前方有公車。",
+    "seconds": 0.9767083333333333,
+    "sha256": "d970ea017abebf5526e830c5b3fd89722eb34678085b9925a1553231ce9f0efa",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 55.700291666666665,
+    "source_end_s": 56.677,
+    "order": 28
+  },
+  "urgent_center_bus.wav": {
+    "text": "注意，前方公車靠近。",
+    "seconds": 1.6259166666666667,
+    "sha256": "62030222d86963d6c45e18bc151d13ec889a959bbf18b174d5535f3742c9af15",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 57.34829166666667,
+    "source_end_s": 58.97420833333333,
+    "order": 29
+  },
+  "normal_right_bus.wav": {
+    "text": "右前方有公車。",
+    "seconds": 1.0641041666666666,
+    "sha256": "fd09af6456cbf8b093ccdc6e839bc9db41ac2d6edca9db2cc5495069e773b8de",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 59.595104166666665,
+    "source_end_s": 60.65920833333333,
+    "order": 30
+  },
+  "urgent_right_bus.wav": {
+    "text": "注意，右前方公車靠近。",
+    "seconds": 1.6770833333333333,
+    "sha256": "b9dcb00002ab744fd3d7f21fe78e08d1743d1a642a89ee75a664d8396a0eadf5",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 61.329708333333336,
+    "source_end_s": 63.006791666666665,
+    "order": 31
+  },
+  "normal_left_truck.wav": {
+    "text": "左前方有卡車。",
+    "seconds": 1.1035,
+    "sha256": "048ef650a088a67120c16fef9f382dc15b9bf113cda6abab73d5743c54083c6c",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 63.637791666666665,
+    "source_end_s": 64.74129166666667,
+    "order": 32
+  },
+  "urgent_left_truck.wav": {
+    "text": "注意，左前方卡車靠近。",
+    "seconds": 1.763,
+    "sha256": "f3f6e9a28c1a779dfaeea34438cf0d55ff0907b0ba12fc431a5ddbaef5ea0537",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 65.39539583333334,
+    "source_end_s": 67.15839583333333,
+    "order": 33
+  },
+  "normal_center_truck.wav": {
+    "text": "前方有卡車。",
+    "seconds": 0.9843958333333334,
+    "sha256": "1989d4becf5a4e3bc498a72dd6a0979d665e4f52439b2f6f51797c7eb3ec9e18",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 67.77089583333333,
+    "source_end_s": 68.75529166666666,
+    "order": 34
+  },
+  "urgent_center_truck.wav": {
+    "text": "注意，前方卡車靠近。",
+    "seconds": 1.6371875,
+    "sha256": "45c6173041674977960503dc07caab30683e5065de761558b67dee92f4e7fef0",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 69.41970833333333,
+    "source_end_s": 71.05689583333333,
+    "order": 35
+  },
+  "normal_right_truck.wav": {
+    "text": "右前方有卡車。",
+    "seconds": 1.0788958333333334,
+    "sha256": "cbc3000f1a6bd6d84a5b15eabc3653a19964dedfec59e44727fc7b0fb4087b3a",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 71.6855,
+    "source_end_s": 72.76439583333334,
+    "order": 36
+  },
+  "urgent_right_truck.wav": {
+    "text": "注意，右前方卡車靠近。",
+    "seconds": 1.718,
+    "sha256": "050484be3498e888a46878e9fb06953a99a631eb281525f5187e56791f8a919a",
+    "source": "提示語音.m4a (Clipchamp)",
+    "source_sha256": "e0fbbdc8cf261e353b4ecce0fea0c052db639e52822750700fe1d7ea90c56b49",
+    "source_start_s": 73.42989583333333,
+    "source_end_s": 75.14789583333334,
+    "order": 37
+  }
+}

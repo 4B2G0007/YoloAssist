@@ -1,0 +1,372 @@
+{
+  "normal_left_bench.wav": {
+    "text": "左前方有長椅。",
+    "seconds": 1.5481041666666666,
+    "sha256": "ab0a3fe4fb527741060a081bcfd5ea59ab28a06a8827a38ebe46b01cc6c52896",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 0.0,
+    "source_end_s": 1.5481041666666666,
+    "order": 1
+  },
+  "normal_center_bench.wav": {
+    "text": "前方有長椅。",
+    "seconds": 1.336375,
+    "sha256": "f670ba929e0be969e6f7da7901b7739e4a8a99c7d45eca9e7b553620fc142003",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 2.2375208333333334,
+    "source_end_s": 3.5738958333333333,
+    "order": 2
+  },
+  "normal_right_bench.wav": {
+    "text": "右前方有長椅。",
+    "seconds": 1.4560416666666667,
+    "sha256": "abdfd93c0e16234e161e9064acf14c8c96708e0da0c365b9522e02709b1ef4a6",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 4.2843333333333335,
+    "source_end_s": 5.740375,
+    "order": 3
+  },
+  "urgent_center_bench.wav": {
+    "text": "注意，前方有長椅。",
+    "seconds": 2.0645416666666665,
+    "sha256": "11d6b59de81fae3d0d9157669c0622a4d9dca293203df0b0f11e35c8eaef0adf",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 6.4449375,
+    "source_end_s": 8.509479166666667,
+    "order": 4
+  },
+  "normal_left_dog.wav": {
+    "text": "左前方有狗。",
+    "seconds": 1.2672291666666666,
+    "sha256": "1df919013218827e5b6645df8c7257b9aa2f3f52f2c7d49634ab4d41c2981c27",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 9.212270833333333,
+    "source_end_s": 10.4795,
+    "order": 5
+  },
+  "normal_center_dog.wav": {
+    "text": "前方有狗。",
+    "seconds": 1.102,
+    "sha256": "406d84d6ade1ba495f59214edccec74eb382f5bbdeac54bcfb68b58866524142",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 11.109708333333334,
+    "source_end_s": 12.211708333333334,
+    "order": 6
+  },
+  "normal_right_dog.wav": {
+    "text": "右前方有狗。",
+    "seconds": 1.2696875,
+    "sha256": "2e00a1099a9fee93627a301c48b98433d9d643dda21ecc77811c95f00559ec92",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 12.849104166666667,
+    "source_end_s": 14.118791666666667,
+    "order": 7
+  },
+  "urgent_center_dog.wav": {
+    "text": "注意，前方有狗。",
+    "seconds": 1.8699166666666667,
+    "sha256": "b3ee804798432715c267866c1cf65ede9665fa2d1047f7d941790cb12ddf7cac",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 14.754291666666667,
+    "source_end_s": 16.624208333333332,
+    "order": 8
+  },
+  "normal_left_suitcase.wav": {
+    "text": "左前方有行李箱。",
+    "seconds": 1.7716041666666666,
+    "sha256": "68fce059a1ff848ad94f09d88a7be7fa296a4b001a0e7fb8da9ac92ddc3d36b4",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 17.251291666666667,
+    "source_end_s": 19.022895833333333,
+    "order": 9
+  },
+  "normal_center_suitcase.wav": {
+    "text": "前方有行李箱。",
+    "seconds": 1.5733958333333333,
+    "sha256": "ccf77a1f8d7901b7b12ecef5c171002c43e10654c9eaefe33e71648c23831caf",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 19.625208333333333,
+    "source_end_s": 21.198604166666666,
+    "order": 10
+  },
+  "normal_right_suitcase.wav": {
+    "text": "右前方有行李箱。",
+    "seconds": 1.7527916666666667,
+    "sha256": "504d040fb1921a11882260341bd8248589b60996affa8f85a680aa2802a968e3",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 21.809208333333334,
+    "source_end_s": 23.562,
+    "order": 11
+  },
+  "urgent_center_suitcase.wav": {
+    "text": "注意，前方有行李箱。",
+    "seconds": 2.2917083333333332,
+    "sha256": "7bc69734509a438ad613c2cdd69d3c3b4beba30f97a93d782573d99a9fab24c9",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 24.167895833333333,
+    "source_end_s": 26.459604166666665,
+    "order": 12
+  },
+  "normal_left_chair.wav": {
+    "text": "左前方有椅子。",
+    "seconds": 1.4481041666666667,
+    "sha256": "4d2623da29c60b8957dba317f5f65e193db47afc31c56316ed355b90915faef2",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 27.072104166666666,
+    "source_end_s": 28.520208333333333,
+    "order": 13
+  },
+  "normal_center_chair.wav": {
+    "text": "前方有椅子。",
+    "seconds": 1.3021875,
+    "sha256": "feb3202144a932a59882135ecbf25e07f4735523e70b8b8781a5a4196eb14c3f",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 29.200104166666666,
+    "source_end_s": 30.502291666666668,
+    "order": 14
+  },
+  "normal_right_chair.wav": {
+    "text": "右前方有椅子。",
+    "seconds": 1.4622083333333333,
+    "sha256": "71208a44d7c7984ca2066b801ca0868f5daac1e2ab1af2f0f2875814b51454f6",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 31.185291666666668,
+    "source_end_s": 32.6475,
+    "order": 15
+  },
+  "urgent_center_chair.wav": {
+    "text": "注意，前方有椅子。",
+    "seconds": 2.0437083333333335,
+    "sha256": "b68b5590ff0403406b86692d76c32c9644ccce389670192cd13722c9d1cdf760",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 33.34139583333333,
+    "source_end_s": 35.385104166666665,
+    "order": 16
+  },
+  "normal_left_potted_plant.wav": {
+    "text": "左前方有盆栽。",
+    "seconds": 1.5263958333333334,
+    "sha256": "2a218f23eaa2550854b801a0a518b539fdcc4ce6537e5e7d7d5926706fdb910a",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 36.076208333333334,
+    "source_end_s": 37.602604166666666,
+    "order": 17
+  },
+  "normal_center_potted_plant.wav": {
+    "text": "前方有盆栽。",
+    "seconds": 1.3522916666666667,
+    "sha256": "c7ba962aa7e49550dd94f751fad0bbb684eb4b209e40967a9e7473cb2ed95c5d",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 38.275,
+    "source_end_s": 39.627291666666665,
+    "order": 18
+  },
+  "normal_right_potted_plant.wav": {
+    "text": "右前方有盆栽。",
+    "seconds": 1.5068958333333333,
+    "sha256": "4109d8dfa3057d20624ec8ae6ddaecac6c4aac0618b3f4e05bc099da2f804879",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 40.321,
+    "source_end_s": 41.827895833333336,
+    "order": 19
+  },
+  "urgent_center_potted_plant.wav": {
+    "text": "注意，前方有盆栽。",
+    "seconds": 2.088604166666667,
+    "sha256": "493d9f78ee334d444b962db8351797ace00f66f2a83687126072c825ad6ab4bd",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 42.517895833333334,
+    "source_end_s": 44.6065,
+    "order": 20
+  },
+  "entry_left_person.wav": {
+    "text": "注意，左側行人進入前方。",
+    "seconds": 2.7013125,
+    "sha256": "664dbd0296c22cdac373bb846381ef9ccca703d1b7f28f4de628e2ebfc9911c0",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 45.29179166666667,
+    "source_end_s": 47.99310416666667,
+    "order": 21
+  },
+  "entry_right_person.wav": {
+    "text": "注意，右側行人進入前方。",
+    "seconds": 2.6763125,
+    "sha256": "938794b5e30a842c9713b7ebe9112921fc33ab53af2662f1980a51c84604b891",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 48.616791666666664,
+    "source_end_s": 51.293104166666666,
+    "order": 22
+  },
+  "entry_left_bicycle.wav": {
+    "text": "注意，左側自行車進入前方。",
+    "seconds": 2.9055,
+    "sha256": "3e97c50d3220e77ff69ed31a03aaec5e3860dfa5e19e7b2ce99532c19a2f23df",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 51.91679166666667,
+    "source_end_s": 54.822291666666665,
+    "order": 23
+  },
+  "entry_right_bicycle.wav": {
+    "text": "注意，右側自行車進入前方。",
+    "seconds": 2.876708333333333,
+    "sha256": "c7741157bde8a5807571e8f9fe32bc0afbd50aedefdd7d84ee2b680092572d02",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 55.449395833333334,
+    "source_end_s": 58.32610416666667,
+    "order": 24
+  },
+  "entry_left_car.wav": {
+    "text": "注意，左側汽車進入前方。",
+    "seconds": 2.714395833333333,
+    "sha256": "c638a20037eb245b61e11ca02c003c2e6b4cb34e702926328bcf38884b431bbe",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 58.93239583333333,
+    "source_end_s": 61.646791666666665,
+    "order": 25
+  },
+  "entry_right_car.wav": {
+    "text": "注意，右側汽車進入前方。",
+    "seconds": 2.6895,
+    "sha256": "150586a43f4d5b93acb2d70ea464ea8c4186f27104265fd9a5e17752b0795606",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 62.261604166666665,
+    "source_end_s": 64.95110416666667,
+    "order": 26
+  },
+  "entry_left_motorcycle.wav": {
+    "text": "注意，左側機車進入前方。",
+    "seconds": 2.6901041666666665,
+    "sha256": "a58b77d8fb0c062d65e8e6d509386e200a2c337061f6776bae46b9f40587ebf2",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 65.5735,
+    "source_end_s": 68.26360416666667,
+    "order": 27
+  },
+  "entry_right_motorcycle.wav": {
+    "text": "注意，右側機車進入前方。",
+    "seconds": 2.6593125,
+    "sha256": "2e6a227d05699a5f8052ceb131faf6ba0ed3e510be08f6ff13e3ff1ef851d881",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 68.87929166666666,
+    "source_end_s": 71.53860416666667,
+    "order": 28
+  },
+  "entry_left_bus.wav": {
+    "text": "注意，左側公車進入前方。",
+    "seconds": 2.7219166666666665,
+    "sha256": "b5252cff62eb04cc10aae9189725c3e6f79b98883519177abb42d48870ac7337",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 72.15429166666667,
+    "source_end_s": 74.87620833333334,
+    "order": 29
+  },
+  "entry_right_bus.wav": {
+    "text": "注意，右側公車進入前方。",
+    "seconds": 2.6845,
+    "sha256": "111c7ba718fe97693769c3b9b94c184d9a00e5443cab9aeadce3f17729c68b7e",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 75.49179166666667,
+    "source_end_s": 78.17629166666667,
+    "order": 30
+  },
+  "entry_left_truck.wav": {
+    "text": "注意，左側卡車進入前方。",
+    "seconds": 2.7138125,
+    "sha256": "3962ea0905433c2df3a6b3ea4766be5859ead23b7ec0a4f76b8752bea56444e5",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 78.79179166666667,
+    "source_end_s": 81.50560416666667,
+    "order": 31
+  },
+  "entry_right_truck.wav": {
+    "text": "注意，右側卡車進入前方。",
+    "seconds": 2.676416666666667,
+    "sha256": "1842783e1430bd222d5bd26e42bb126dd35c52c78426245eb30aa9203962d55e",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 82.12929166666666,
+    "source_end_s": 84.80570833333333,
+    "order": 32
+  },
+  "quality_dark.wav": {
+    "text": "畫面太暗，辨識可能受影響。",
+    "seconds": 2.7071875,
+    "sha256": "389e3f0192888046f993854ed91f97f7d21fff20c55a3f62836254716a544efd",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 85.47470833333334,
+    "source_end_s": 88.18189583333333,
+    "order": 33
+  },
+  "quality_unclear.wav": {
+    "text": "畫面不清楚，請檢查攝影機。",
+    "seconds": 2.8575,
+    "sha256": "092f4fbef5ebf28513d5f59d9a9cb859bca904e4710042b3366b1be8aa0535f6",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 88.83339583333333,
+    "source_end_s": 91.69089583333333,
+    "order": 34
+  },
+  "quality_recovered.wav": {
+    "text": "畫面品質已恢復。",
+    "seconds": 1.6636041666666668,
+    "sha256": "33e1454cd988af897788c7de88d17e2418af31e9bd65e1b59e9822f9e12986c1",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 92.41339583333334,
+    "source_end_s": 94.077,
+    "order": 35
+  },
+  "summary_empty.wav": {
+    "text": "目前沒有辨識到目標，請留意周圍環境。",
+    "seconds": 3.5605,
+    "sha256": "4ea1f369bd7b94cc0d0ae5f4932594f37bfa27ec5225bcc15def93735372c301",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 94.70789583333334,
+    "source_end_s": 98.26839583333333,
+    "order": 36
+  },
+  "summary_unavailable.wav": {
+    "text": "目前影像資訊不足，暫時無法描述。",
+    "seconds": 3.3357916666666667,
+    "sha256": "accd0a2baf4bbf13d8dc38b874331e457d7590248dc26902578b13bc985a47bb",
+    "source": "v1.1新增提示音.m4a",
+    "source_sha256": "ef4fa076e6a1dc09d2b1db1fb254f01e36d21f838ff25eee4a52a7ae7c762059",
+    "source_start_s": 98.92020833333333,
+    "source_end_s": 102.256,
+    "order": 37
+  }
+}
