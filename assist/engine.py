@@ -1,6 +1,6 @@
 """Small deterministic tracker and rules. All times supplied by caller in seconds."""
 from dataclasses import dataclass
-from .config import CLASSES, NEW_CLASSES
+from .config import CLASS_RANK, CLASSES, NEW_CLASSES
 
 DIRECTIONS = {'left': '左前方', 'center': '前方', 'right': '右前方'}
 
@@ -218,6 +218,7 @@ class Engine:
             proposals.append({'track_id':tid,'class_name':row['class_name'],'direction':spoken_direction,
                               'level':level,'text':text,'clip':clip,'event_type':event_type,'priority':priority,
                               'entry_origin':t.origin_side,'also_entry':entered and level=='urgent',
+                              'class_rank':CLASS_RANK.get(t.cls,0),
                               'height_ratio':h,'in_roi':in_roi,'rule_score':h+(1 if in_roi else 0),'row':row})
         # Missing detections break consecutive confirmation and immediately suppress a held near state.
         observed = {r['track_id'] for r in valid}
@@ -230,7 +231,8 @@ class Engine:
                     transitions.append({'track_id': tid, 'from': t.state, 'to': 'detected', 'reason': 'not_observed'})
                 t.state = 'detected'
         selected, events = None, []
-        proposals.sort(key=lambda x: (x['priority'], x['rule_score'], -x['track_id']), reverse=True)
+        # 同等級時依類別優先序（樓梯 > 車輛 > 行人），再看框大小與是否在路徑上。
+        proposals.sort(key=lambda x: (x['priority'], x['class_rank'], x['rule_score'], -x['track_id']), reverse=True)
         for p in proposals:
             row = p.pop('row')
             level = p['level']

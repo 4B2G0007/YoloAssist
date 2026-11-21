@@ -1,3 +1,10 @@
+> **2026-11-21 合併版（1.2.0-pi5）補充**：本檔原為 GitHub 1.1.1-pi5 的說明，以下內容仍適用，另外：
+> - `config.pi.json` 預設模型改為微調後的 `weights/blindassist_v1_ncnn_model`（86 類，含斑馬線、上下樓梯、紅黃綠燈）。
+>   Pi 上需額外 `pip install ncnn`；`python tools/check_pi.py` 會一併檢查。想用原始模型：`--model yolo11n.pt`。
+> - 新增斑馬線／樓梯語音（`audio/` 多 12 個 WAV），`tools/check_voices.py` 預期數量會比下文多。
+> - 紅綠燈 V2：`--traffic-light`（只顯示、不播報）。
+> - 資料夾名稱請以實際放置位置為準（下文的 `Grad-RPi5-Camera3` 只是範例）。
+
 # YOLOAssist V1.1.1：Raspberry Pi 5＋Camera Module 3 移交版
 
 本版根據組員提供的 `stream.py` 相機設定接入現有 YOLO 程式。請先停止

@@ -20,7 +20,8 @@ class Overlay:
                 except OSError:
                     pass
 
-    def draw(self, frame, rows, title, prompt, age=None, quality=None):
+    def draw(self, frame, rows, title, prompt, age=None, quality=None,
+             traffic_lights=None, traffic_light_debug=False):
         cv2 = self.cv2
         out = frame.copy()
         h,w = out.shape[:2]
@@ -61,7 +62,14 @@ class Overlay:
             import numpy as np
             im = Image.fromarray(cv2.cvtColor(out,cv2.COLOR_BGR2RGB))
             ImageDraw.Draw(im).text((8,32),status,font=self.font,fill=(255,230,80))
-            return cv2.cvtColor(np.asarray(im),cv2.COLOR_RGB2BGR)
-        cv2.putText(out, status if status.isascii() else 'Last alert in event log / install CJK font',
-                    (8,48),cv2.FONT_HERSHEY_SIMPLEX,.45,(0,220,255),1,cv2.LINE_AA)
+            out = cv2.cvtColor(np.asarray(im),cv2.COLOR_RGB2BGR)
+        else:
+            cv2.putText(out, status if status.isascii() else 'Last alert in event log / install CJK font',
+                        (8,48),cv2.FONT_HERSHEY_SIMPLEX,.45,(0,220,255),1,cv2.LINE_AA)
+        if traffic_lights is not None:
+            from .traffic_light import draw_lights
+            # Keep upper-image lamps visible instead of covering them with the
+            # opaque status header. Text panels avoid the header and objects.
+            draw_lights(out, traffic_lights, traffic_light_debug, age=age,
+                        avoid_rects=[d['xyxy'] for d in rows if d['eligible']])
         return out

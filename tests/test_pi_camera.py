@@ -88,7 +88,8 @@ class LaunchTests(unittest.TestCase):
     def test_rule_thresholds_and_cooldowns_are_unchanged(self):
         old=load(entry.ROOT/'config.v1.1.json');pi=load(entry.ROOT/'config.pi.json')
         changed={k for k in old if old[k]!=pi[k]}
-        self.assertEqual(changed,{'device','camera_format'})
+        # model 也不同：Pi 預設用微調後的 NCNN 模型（桌機預設仍是 yolo11n.pt，可用 --model 指定）
+        self.assertEqual(changed,{'device','camera_format','model'})
 
     def test_linux_arm_is_not_automatically_raspberry_pi(self):
         with patch.object(entry.sys,'platform','linux'),patch.object(Path,'read_text',return_value='Other ARM board'):

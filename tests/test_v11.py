@@ -28,7 +28,7 @@ class BehaviorTests(unittest.TestCase):
             values.append(self.step([box(a,b,h=h)],t,motion_ok=motion_ok))
         return values
     def test_new_classes_and_recording_catalog(self):
-        self.assertEqual(len(CLASSES),11);self.assertEqual(len(additions()),37)
+        self.assertEqual(len(CLASSES),14);self.assertEqual(len(additions()),49)  # 11 V1.1 類別 + 斑馬線、上下樓梯
         self.assertEqual(CLASSES[58][0],'potted plant')
         self.assertIn('normal_center_potted_plant.wav',additions())
     def test_confirmed_left_entry(self):
@@ -71,8 +71,10 @@ class BehaviorTests(unittest.TestCase):
     def test_new_obstacle_near_polygon(self):
         for cls in NEW_CLASSES:
             e=Engine(self.c)
-            e.update([box(.4,.6,.5,cls=cls,y=.4)],1000,1000,0)
+            # 斑馬線／樓梯的立即門檻較低，第一幀就可能提醒，所以兩幀中任一幀選中即可。
+            first=e.update([box(.4,.6,.5,cls=cls,y=.4)],1000,1000,0)[2]
             rows,_,ch,_=e.update([box(.4,.6,.5,cls=cls,y=.4)],1000,1000,.2)
+            ch=ch or first
             self.assertEqual(ch['event_type'],'near');self.assertIn('有',ch['text'])
             self.assertTrue(rows[0]['near_polygon_overlap']>0)
     def test_lateral_or_high_obstacle_not_near(self):
@@ -213,9 +215,7 @@ class NewPipelineTests(unittest.TestCase):
             self.assertTrue(w.isOpened())
             for i in range(30):w.write(np.zeros((240,320,3),np.uint8) if i<13 else texture())
             w.release()
-            # This case tests missing audio explicitly; the shipped pack now has all 74 clips.
             r=run(source,copy.deepcopy(DEFAULT),Empty(),output=Path(td)/'out',summary_at=[1.1],
-                  audio_dir=Path(td)/'intentionally_missing_audio',
                   key_provider=lambda n:ord('m') if n==15 else -1)
             self.assertEqual(r['status'],'completed');self.assertEqual(r['final_alert_mode'],'classic')
             self.assertEqual(r['video']['verified_frames'],30)

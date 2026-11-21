@@ -1,0 +1,79 @@
+{
+  "release": "YoloAssist-TrafficLight-V2.1-Update",
+  "date_taipei": "2026-10-25",
+  "github_repository": "https://github.com/4B2G0007/YoloAssist",
+  "github_commit": "02f243fe378aa80a2030928c383903c5b741aca8",
+  "previous_release_sha256": "4caf96009b5073f3a744d283448968028b84a8cd8c06431ba828ff14208f6da6",
+  "files": [
+    {
+      "path": "main.py",
+      "size_bytes": 8759,
+      "sha256": "96f2d7ac16ac51ac4bc9afdeae502156b4fe1f7c8099be55f318941b454a141c",
+      "previous_v2_sha256": "ceb9914b03200c0b1c43fd5aec57411248a8388c52a9ba5adc14308b12057c3d",
+      "changed_from_v2": true,
+      "baseline_sha256": "5d17f33158ad9fff69b57e790ccf507c99caf062cc680738668ab09e9cb3f125"
+    },
+    {
+      "path": "assist/detector.py",
+      "size_bytes": 2032,
+      "sha256": "2d5dd0f6e6032366b124cd1aa9c35eb8dbcab52c1fdcb1198aeae748ec762bca",
+      "previous_v2_sha256": "2d5dd0f6e6032366b124cd1aa9c35eb8dbcab52c1fdcb1198aeae748ec762bca",
+      "changed_from_v2": false,
+      "baseline_sha256": "586aa11a0b74babc6ef1b9d824ccf6e41266f3b7d3417ee3de92ef3437c07076"
+    },
+    {
+      "path": "assist/runner.py",
+      "size_bytes": 18581,
+      "sha256": "416da0562250fe5455beea7295a8550f7343c8ab94a438511c837f2c8f876d59",
+      "previous_v2_sha256": "416da0562250fe5455beea7295a8550f7343c8ab94a438511c837f2c8f876d59",
+      "changed_from_v2": false,
+      "baseline_sha256": "a497e2f0926b47a473278c9095c931e309c687eb90bc90517e4fe39df70a398c"
+    },
+    {
+      "path": "assist/render.py",
+      "size_bytes": 4099,
+      "sha256": "842f2e5b2767fa970a5e7bbafd234477651b75f0c772c159bacbd43a25fb3605",
+      "previous_v2_sha256": "86d85ab31158654d1655d709e16e255cfec90c525eddfab2f7ea1cf9c1ab284b",
+      "changed_from_v2": true,
+      "baseline_sha256": "76cd4995d039266d9b284045cc89d17eded7110a2dc558b0600b80cc8cd3f142"
+    },
+    {
+      "path": "assist/traffic_light.py",
+      "size_bytes": 15705,
+      "sha256": "6822e18d23cdb34fd641ecf8eff50733e6eae3475fef8e4d5ed7eb29e550ccac",
+      "previous_v2_sha256": "7546c70c63c475c1ab96ca8dd8995edd30c81218896c9ec066fb4f20c5d83ac1",
+      "changed_from_v2": true
+    },
+    {
+      "path": "tests/test_traffic_light.py",
+      "size_bytes": 28389,
+      "sha256": "3e1022e26f475b5df4d445310598502cde2e40065841730b7b57875375f68e25",
+      "previous_v2_sha256": "b6bae6dd64097dc9c5e573d3f493245d441d8390a572131d4728f6e16683d452",
+      "changed_from_v2": true
+    },
+    {
+      "path": "TRAFFIC_LIGHT_V2_README.md",
+      "size_bytes": 5350,
+      "sha256": "99cb38dd9c041bbe19e4f20ebf16dabbd26a710ccac146734eb91f35867ba4c1",
+      "previous_v2_sha256": "9e468751804771f702ae031c2ab8f51f060975b5cb67dd41871fdae5d43578f4",
+      "changed_from_v2": true
+    },
+    {
+      "path": "docs/traffic-light-v2/TEST_REPORT.md",
+      "size_bytes": 3741,
+      "sha256": "025d18aca0a6fcbdaee1ff443fb93dcf9dae493735134e4b880f49c403d1919f",
+      "previous_v2_sha256": "148e79492c6701df92f803feab51ab7e244e80218c719b284bf03508fd3dfe20",
+      "changed_from_v2": true
+    },
+    {
+      "path": "docs/traffic-light-v2/PREVIEW_V21_SYNTHETIC.png",
+      "size_bytes": 121055,
+      "sha256": "3de79729ff479beee41b45462f204ffe515ade6176db77d186ee35f817468ed4"
+    }
+  ],
+  "notes": [
+    "This manifest excludes its own hash.",
+    "Complete integration patch: original project or V2 integration can receive this update.",
+    "Synthetic tests only, no real street or hardware validation."
+  ]
+}

@@ -3,6 +3,7 @@ import time
 from collections import Counter
 from pathlib import Path
 
+from .config import LIGHT_COLOR_CLASSES
 from .engine import Engine
 from .recording import Recorder, sha256
 from .render import Overlay
@@ -20,11 +21,30 @@ def percentile(values, p):
     return ordered[min(len(ordered)-1, math.ceil(len(ordered)*p)-1)]
 
 
+def light_candidates(candidates, class_id):
+    """微調模型會把亮燈直接分成紅／黃／綠燈類別；這些框也交給 Traffic Light V2，
+    以同一套 HSV 判色與多幀確認處理（燈號只顯示、不播報）。原始 candidates 不改動。"""
+    return [dict(c, class_id=class_id, model_color=LIGHT_COLOR_CLASSES[int(c['class_id'])])
+            if int(c['class_id']) in LIGHT_COLOR_CLASSES else c for c in candidates]
+
+
 def run(source, config, detector, output='results', record=True, display=False,
-        realtime=False, audio=False, audio_dir='audio', max_frames=None, summary_at=None, key_provider=None):
+        realtime=False, audio=False, audio_dir='audio', max_frames=None, summary_at=None, key_provider=None,
+        traffic_light=None):
     import cv2
     is_camera = str(source).isdigit() or str(source)=='picamera2'
     stem = ('picamera2' if str(source)=='picamera2' else 'camera'+str(source)) if is_camera else Path(source).stem
+    # Independent state per source. Skipped source frames never update its votes.
+    traffic = None
+    tl_metadata = {}
+    if traffic_light is not None:
+        from .traffic_light import TrafficLightAnalyzer
+        class_id = getattr(detector, 'traffic_light_class_id', 9)
+        if class_id is None:
+            raise ValueError('Detector must be initialized with traffic_light options.')
+        traffic = TrafficLightAnalyzer(traffic_light, class_id, config['stale_seconds'])
+        tl_metadata = {'traffic_light': dict(traffic_light.snapshot(), class_id=class_id,
+                                           max_gap_s=config['stale_seconds'])}
     # A per-run engine/player prevents state leaking across files.
     rec = Recorder(output, stem, record, config, {
         'source': str(source), 'source_sha256': None if is_camera else sha256(source),
@@ -34,7 +54,7 @@ def run(source, config, detector, output='results', record=True, display=False,
         'missing_new_voices':[name for name in additions() if not (Path(audio_dir)/name).is_file()],
         'time_basis': 'monotonic_since_start' if is_camera else 'source_frame_index/fps',
         'video_audio': 'silent_output_no_original_audio',
-        'candidate_scope': 'post_model_confidence_and_NMS_all_classes'})
+        'candidate_scope': 'post_model_confidence_and_NMS_all_classes', **tl_metadata})
     missing_voices=[name for name in additions() if not (Path(audio_dir)/name).is_file()]
     print(f'[{stem}] '+(f'Output: {rec.directory}' if record else 'Recording OFF'))
     engine, overlay = Engine(config), Overlay(config)
@@ -53,6 +73,7 @@ def run(source, config, detector, output='results', record=True, display=False,
     latencies, infer_ms = [], []
     observations, prompts, audio_states = Counter(), Counter(), Counter()
     rows, prompt, last_inferred_time, last_inferred_index = [], '', None, None
+    tl_rows, tl_counts = [], Counter()
     raw_time = 0.
     last_result_usable=False
     video_path = rec.directory/f'{stem}_annotated.mp4'
@@ -149,6 +170,8 @@ def run(source, config, detector, output='results', record=True, display=False,
                 elapsed_infer_ms = (time.monotonic()-t0)*1000
                 infer_ms.append(elapsed_infer_ms)
                 inferred += 1
+                if traffic is not None:
+                    tl_rows = traffic.update(frame, light_candidates(candidates, traffic.class_id), raw_time)
                 quality=monitor.check(frame,raw_time,candidates)
                 quality_counts[quality['state']]+=1
                 motion_counts[quality['motion']['state']]+=1
@@ -159,12 +182,17 @@ def run(source, config, detector, output='results', record=True, display=False,
                 last_result_usable=not stale
                 if stale:
                     rows, decisions, chosen = [], [], None
+                    if traffic is not None:
+                        traffic.reset()
+                        tl_rows = []
                     player.cancel_pending('stale_inference')
                     transitions = engine.expire(raw_time+latency)
                     rec.events([{'kind':'error','frame_index':frame_index,'time_s':raw_time,
                                  'reason':'stale_inference_result_suppressed'}])
                     prompt = '影像處理延遲過大，警示暫停' if overlay.font else 'STALE IMAGE: alerts suppressed'
                 else:
+                    if traffic is not None:
+                        tl_counts.update(item['color'] for item in tl_rows)
                     rows, decisions, chosen, transitions = engine.update(candidates,w,h,raw_time,motion_ok=quality['motion_ok'],perception_ok=quality['usable'])
                     observations.update(r['class_name'] for r in rows if r['eligible'])
                     for e in decisions:
@@ -193,6 +221,9 @@ def run(source, config, detector, output='results', record=True, display=False,
                 candidates = None
                 if last_inferred_time is not None and raw_time-last_inferred_time > config['stale_seconds']:
                     rows, prompt = [], ''
+                    if traffic is not None:
+                        traffic.expire(raw_time)
+                        tl_rows = []
                     transitions = engine.expire(raw_time)
             while scheduled and raw_time>=scheduled[0]:
                 scheduled.pop(0)
@@ -207,6 +238,9 @@ def run(source, config, detector, output='results', record=True, display=False,
                         'transitions':transitions, 'decisions':decisions,
                         'acquired_monotonic_s':acquired, 'processed_monotonic_s':time.monotonic(),
                         'preview_lag_s':preview_lag,'quality':quality,'alert_mode':engine.mode}
+            if traffic is not None:
+                metadata.update(traffic_lights=tl_rows if do_infer else [],
+                                traffic_lights_inferred=do_infer and not stale)
             rec.inference(metadata)
             if transitions:
                 rec.events([dict(kind='transition',frame_index=frame_index,time_s=raw_time,
@@ -215,7 +249,9 @@ def run(source, config, detector, output='results', record=True, display=False,
                 mean_ms = sum(infer_ms)/len(infer_ms) if infer_ms else 0
                 title = f't={raw_time:.2f}s #{frame_index} {mean_ms:.0f}ms {engine.mode}'
                 drawn = overlay.draw(frame,rows,title,prompt,
-                                     age=(raw_time-last_inferred_time) if not do_infer and last_inferred_time is not None else None,quality=quality)
+                                     age=(raw_time-last_inferred_time) if not do_infer and last_inferred_time is not None else None,quality=quality,
+                                     traffic_lights=tl_rows if traffic is not None else None,
+                                     traffic_light_debug=traffic_light.debug if traffic_light is not None else False)
                 if writer is not None:
                     writer.write(drawn)
                     video_written += 1
@@ -296,6 +332,8 @@ def run(source, config, detector, output='results', record=True, display=False,
                   'video':{'path':str(video_path) if record else None,'written_frames':video_written,
                            'verified_frames':verified_video_frames,'audio_track':False},
                   'cancel_batch':cancelled, 'output_directory':str(rec.directory) if record else None}
+        if traffic is not None:
+            result['traffic_light_observations'] = dict(tl_counts)
         rec.summary(result)
         rec.close()
     print(f'[{stem}] {status}: read {read_count}, inferred {inferred}')

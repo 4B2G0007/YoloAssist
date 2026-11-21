@@ -7,8 +7,15 @@ from pathlib import Path
 CLASSES = {0: ('person', '行人'), 1: ('bicycle', '自行車'), 2: ('car', '汽車'),
            3: ('motorcycle', '機車'), 5: ('bus', '公車'), 7: ('truck', '卡車'),
            13: ('bench', '長椅'), 16: ('dog', '狗'), 28: ('suitcase', '行李箱'),
-           56: ('chair', '椅子'), 58: ('potted plant', '盆栽')}
-NEW_CLASSES = {13, 16, 28, 56, 58}
+           56: ('chair', '椅子'), 58: ('potted plant', '盆栽'),
+           # 微調模型（街景--mapillary/classes.py）新增的類別；COCO 原始模型沒有這些 id，偵測不到也不會出錯。
+           80: ('crosswalk', '斑馬線'), 81: ('stairs_up', '上樓梯'), 82: ('stairs_down', '下樓梯')}
+# 靜態目標：用梯形「腳前區域」判斷靠近，不做側向進入判斷；語音句型「注意，前方有X。」
+NEW_CLASSES = {13, 16, 28, 56, 58, 80, 81, 82}
+# 微調模型的燈色類別：只交給 Traffic Light V2 顯示（維持「不播報燈號」的保守設計），不進語音警示。
+LIGHT_COLOR_CLASSES = {83: 'red_light', 84: 'yellow_light', 85: 'green_light'}
+# 同一時間多個提醒時的類別優先序（數字大者先播）：樓梯 > 車輛 > 行人 > 其他（HANDOFF 驗收項 D）。
+CLASS_RANK = {82: 4, 81: 3, 1: 2, 2: 2, 3: 2, 5: 2, 7: 2, 0: 1}
 DEFAULT = {
     'model': 'yolo11n.pt', 'device': 'auto', 'imgsz': 640,
     'model_conf': 0.15, 'alert_conf': 0.45, 'nms_iou': 0.45,
@@ -18,6 +25,7 @@ DEFAULT = {
     'normal_global_gap': 1.0, 'urgent_global_gap': 0.7,
     'audio_max_age': 2.5, 'stale_seconds': 2.0,
     'stride': 1, 'camera_size': [640, 480], 'camera_timeout': 5.0,
+    # Pi 相機設定（合併自 GitHub 1.1.1-pi5）
     'camera_index': 0, 'camera_format': 'RGB888', 'camera_fps': 30.0,
     'camera_autofocus': 'continuous', 'camera_warmup_s': 1.0,
     'font': '', 'font_size': 20,
@@ -45,7 +53,12 @@ DEFAULT = {
         'dog': {'near':0.30,'immediate':0.65,'release':0.24},
         'suitcase': {'near':0.30,'immediate':0.65,'release':0.24},
         'chair': {'near':0.35,'immediate':0.65,'release':0.28},
-        'potted plant': {'near':0.35,'immediate':0.65,'release':0.28}}}
+        'potted plant': {'near':0.35,'immediate':0.65,'release':0.28},
+        # 新類別的框高比例門檻：暫定值，需用自錄行人視角影片校準。
+        # 下樓梯最危險，門檻最低、最早提醒。
+        'crosswalk': {'near':0.15,'immediate':0.35,'release':0.11},
+        'stairs_up': {'near':0.20,'immediate':0.40,'release':0.15},
+        'stairs_down': {'near':0.12,'immediate':0.25,'release':0.09}}}
 
 def validate(c):
     def number(k, low, high=None, integer=False):

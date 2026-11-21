@@ -1,8 +1,11 @@
 {
-  "model": "yolo11n.pt",
+  "model": "weights/blindassist_v1_ncnn_model",
   "device": "cpu",
   "imgsz": 640,
-  "camera_size": [640, 480],
+  "camera_size": [
+    640,
+    480
+  ],
   "camera_format": "XBGR8888",
   "camera_index": 0,
   "camera_fps": 30.0,

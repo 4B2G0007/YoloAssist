@@ -34,6 +34,7 @@ def parse_args(argv=None):
     p.add_argument('--summary-at',type=float,action='append',default=[],help='Request description at source seconds; repeatable')
     p.add_argument('--model',help='Path to your existing yolo11n.pt')
     p.add_argument('--device',help='auto, cpu or CUDA index such as 0')
+    p.add_argument('--imgsz',type=int,help='Shared YOLO input size; default from config (640). Larger sizes can help small distant objects but cost more time')
     p.add_argument('--camera-index',type=int,help='Picamera2 camera number; default 0')
     p.add_argument('--camera-format',choices=['XBGR8888','XRGB8888','RGB888','BGR888'],help='Picamera2 pixel format')
     p.add_argument('--camera-fps',type=float,help='requested camera capture FPS, NOT YOLO inference FPS')
@@ -46,6 +47,11 @@ def parse_args(argv=None):
     p.add_argument('--audio-dir',default=str(ROOT/'audio'))
     p.add_argument('--no-record',action='store_true',help='Do not save per-source logs/video')
     p.add_argument('--max-frames',type=int,help='Stop early for a short smoke test; marked limited')
+    p.add_argument('--traffic-light',action='store_true',help='Show Traffic Light V2 using the existing YOLO inference (no light audio)')
+    p.add_argument('--tl-conf',type=float,default=0.30,help='Traffic-light YOLO box confidence, not color confidence (default 0.30)')
+    p.add_argument('--tl-min-contrast',type=float,default=22.0,help='Minimum lamp vs surrounding HSV V contrast (default 22)')
+    p.add_argument('--tl-min-frames',type=int,default=2,help='Matching color observations in the last 5 actual inferences (1..5; default 2)')
+    p.add_argument('--tl-debug',action='store_true',help='With --traffic-light, add diagnostic text and rejected boxes; pending accepted boxes are always visible')
     return p.parse_args(argv)
 
 
@@ -67,7 +73,7 @@ def configure(args, raspberry_pi=None):
         c['device'] = args.device
     elif raspberry_pi:
         c['device'] = 'cpu'
-    for attr, key in [('stride','stride'), ('mode','alert_mode'),
+    for attr, key in [('stride','stride'), ('mode','alert_mode'), ('imgsz','imgsz'),
                       ('camera_index','camera_index'), ('camera_format','camera_format'),
                       ('camera_fps','camera_fps'), ('autofocus','camera_autofocus')]:
         value = getattr(args, attr)
@@ -86,6 +92,11 @@ def main():
     args = parse_args()
     try:
         c, source, config_path = configure(args)
+        traffic_light = None
+        if args.traffic_light:
+            from assist.traffic_light import TrafficLightOptions
+            traffic_light = TrafficLightOptions(args.tl_conf, args.tl_min_contrast,
+                                                args.tl_min_frames, args.tl_debug)
         print(f'[Startup] source={source}; device={c["device"]}; config={config_path}',flush=True)
         camera = source.isdigit() or source=='picamera2'
         if source=='picamera2':
@@ -106,12 +117,17 @@ def main():
                 raise ValueError(f'Video source missing or unsupported: {src} (MP3 is not video)')
         from assist.detector import Detector
         from assist.runner import run
-        detector = Detector(c)
+        detector = Detector(c, traffic_light=traffic_light) if traffic_light else Detector(c)
+        if traffic_light:
+            print(f'[Traffic light] device={detector.device}; imgsz={c["imgsz"]}; '
+                  f'YOLO >= {traffic_light.confidence:.2f}; color confirmation='
+                  f'{traffic_light.min_frames}/5 actual inferences; cyan=pending, RGB=confirmed',flush=True)
         reports = []
         for source in sources:
             report = run(source,c,detector,output=args.output,record=not args.no_record,
                          display=args.show,realtime=args.realtime,audio=args.audio,
-                         audio_dir=args.audio_dir,max_frames=args.max_frames,summary_at=args.summary_at)
+                         audio_dir=args.audio_dir,max_frames=args.max_frames,summary_at=args.summary_at,
+                         traffic_light=traffic_light)
             reports.append(report)
             if report['cancel_batch']:
                 break

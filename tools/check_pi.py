@@ -20,11 +20,16 @@ def main():
     c = load(args.config)
     report = {'python':sys.executable, 'python_version':sys.version,
               'architecture':platform.machine(), 'modules':{},
-              'model_exists':(ROOT/c['model']).is_file(),
+              'model':c['model'],
+              # .pt 是檔案；NCNN 模型是資料夾（*_ncnn_model）
+              'model_exists':(ROOT/c['model']).exists(),
               'audio_player':next((x for x in ('aplay','paplay','ffplay') if shutil.which(x)),None),
               'capture':None}
     failed = not report['model_exists']
-    for name in ('numpy','cv2','torch','ultralytics','picamera2','libcamera'):
+    modules = ['numpy','cv2','torch','ultralytics','picamera2','libcamera']
+    if str(c['model']).rstrip('/').endswith('_ncnn_model'):
+        modules.append('ncnn')  # NCNN 模型需要 pip install ncnn
+    for name in modules:
         try:
             module = importlib.import_module(name)
             report['modules'][name] = {'ok':True,'version':str(getattr(module,'__version__','system package'))}

@@ -1,0 +1,86 @@
+{
+  "normal_left_crosswalk.wav": {
+    "text": "左前方有斑馬線。",
+    "seconds": 1.5943541666666667,
+    "sha256": "656cd9efe471117998c05e47994ac213e196c5a42ba4151652c27ee20575c24e",
+    "source": "Windows SAPI Microsoft Hanhan Desktop (zh-TW), rate=1",
+    "order": 1
+  },
+  "normal_center_crosswalk.wav": {
+    "text": "前方有斑馬線。",
+    "seconds": 1.3473125,
+    "sha256": "478d8a69977aa8f3790fb797cc0716c116fdcb9d99f78dc02ff03dbdbbb7d4c3",
+    "source": "Windows SAPI Microsoft Hanhan Desktop (zh-TW), rate=1",
+    "order": 2
+  },
+  "normal_right_crosswalk.wav": {
+    "text": "右前方有斑馬線。",
+    "seconds": 1.55275,
+    "sha256": "f43078c98cf017b1e642d07dd9d8624b4b5f55674221940a287588009736b9de",
+    "source": "Windows SAPI Microsoft Hanhan Desktop (zh-TW), rate=1",
+    "order": 3
+  },
+  "urgent_center_crosswalk.wav": {
+    "text": "注意，前方有斑馬線。",
+    "seconds": 1.9283333333333332,
+    "sha256": "c6ac7125c3f597013bea765f524a076b9005ea6fcef43a677e74c1832ff6a55e",
+    "source": "Windows SAPI Microsoft Hanhan Desktop (zh-TW), rate=1",
+    "order": 4
+  },
+  "normal_left_stairs_up.wav": {
+    "text": "左前方有上樓梯。",
+    "seconds": 1.6417291666666667,
+    "sha256": "9b270307af6e8dea48db58891aad4d7ce2512f16b6cead2c0070d50cf5e44775",
+    "source": "Windows SAPI Microsoft Hanhan Desktop (zh-TW), rate=1",
+    "order": 5
+  },
+  "normal_center_stairs_up.wav": {
+    "text": "前方有上樓梯。",
+    "seconds": 1.3983958333333333,
+    "sha256": "e97d917cb171224e77690528e820b267b024f97a562ca8783e3a455c179ef2e0",
+    "source": "Windows SAPI Microsoft Hanhan Desktop (zh-TW), rate=1",
+    "order": 6
+  },
+  "normal_right_stairs_up.wav": {
+    "text": "右前方有上樓梯。",
+    "seconds": 1.60275,
+    "sha256": "a38155f6223e61021e4278cbf755717b98edecfbddfdf54f8680e8d522859f84",
+    "source": "Windows SAPI Microsoft Hanhan Desktop (zh-TW), rate=1",
+    "order": 7
+  },
+  "urgent_center_stairs_up.wav": {
+    "text": "注意，前方有上樓梯。",
+    "seconds": 2.0028125,
+    "sha256": "d929d9171c8bc9bc5d5c9da3e4e166cf790ceac97a5aea0252b7d12dc8ff8204",
+    "source": "Windows SAPI Microsoft Hanhan Desktop (zh-TW), rate=1",
+    "order": 8
+  },
+  "normal_left_stairs_down.wav": {
+    "text": "左前方有下樓梯。",
+    "seconds": 1.6421666666666668,
+    "sha256": "43d3d8f914e2cf70ca91ac4f7d88701dc36b8205a4a367748babbe403d6019a7",
+    "source": "Windows SAPI Microsoft Hanhan Desktop (zh-TW), rate=1",
+    "order": 9
+  },
+  "normal_center_stairs_down.wav": {
+    "text": "前方有下樓梯。",
+    "seconds": 1.3985625,
+    "sha256": "7f7ebe28028631aea0f0d122297f2100f13ccbe57b8de0cf55206d90c1e03efe",
+    "source": "Windows SAPI Microsoft Hanhan Desktop (zh-TW), rate=1",
+    "order": 10
+  },
+  "normal_right_stairs_down.wav": {
+    "text": "右前方有下樓梯。",
+    "seconds": 1.607,
+    "sha256": "7bf16b17df08c4162762b3dc6e876c3038832adbf4bbf5e32f943583add3048a",
+    "source": "Windows SAPI Microsoft Hanhan Desktop (zh-TW), rate=1",
+    "order": 11
+  },
+  "urgent_center_stairs_down.wav": {
+    "text": "注意，前方有下樓梯。",
+    "seconds": 2.0055833333333335,
+    "sha256": "a673aabb2c1560965a1630a29c257f5e19dca9c1b0a425e2666e289ad484c2ad",
+    "source": "Windows SAPI Microsoft Hanhan Desktop (zh-TW), rate=1",
+    "order": 12
+  }
+}
